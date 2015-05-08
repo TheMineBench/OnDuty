@@ -1,0 +1,19 @@
+name: OnDuty
+version: 0.1
+description: A simple that allows Administrators to announce when they are on duty!
+main: me.theminebench.onduty.OnDuty
+author: TheMineBench
+
+commands:
+    Budeti:
+      description: Toggles whether or not you are on duty!
+      aliases: [onDuty, duty]
+      permission: onduty.budeti
+      usage: /<command>
+permissions:
+    onduty.budeti:
+      description: Allows you to enable/disable use the command /budeti
+      default: op
+    onduty.checkBudeti:
+      description: Allows you to use the command /budeti [player] to find out if a player is on duty!
+      default: op

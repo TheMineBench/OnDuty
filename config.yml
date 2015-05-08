@@ -1,0 +1,9 @@
+#Replaces "<player>" with the players name
+enableDutyMessage: '&cAdministrator &e<player> &cis now on duty!'
+disableDutyMessage: '&cAdministrator &e<player> &cno longer on duty!'
+
+playersOnDutyMessage: '&e<player> &cis on duty!'
+playersOffDutyMessage: '&e<player> &cis off duty!'
+
+unableToFindPlayerMessage: '&cUnable to find &e<player>&c!'
+
