@@ -5,5 +5,6 @@ disableDutyMessage: '&cAdministrator &e<player> &cno longer on duty!'
 playersOnDutyMessage: '&e<player> &cis on duty!'
 playersOffDutyMessage: '&e<player> &cis off duty!'
 
+playerIsNotStaff: '&e<player> &cis not staff, so he can not be on duty!'
 unableToFindPlayerMessage: '&cUnable to find &e<player>&c!'
 

@@ -22,8 +22,14 @@ public class Buteti implements CommandExecutor {
 				playersName = "CONSOLE";
 			} else
 				for (Player p : Bukkit.getOnlinePlayers()) {
-					if (p.getName().equalsIgnoreCase(args[0]))
-						playersName = p.getName();
+					if (p.getName().equalsIgnoreCase(args[0])) {
+						if (p.hasPermission("onduty.budeti"))
+							playersName = p.getName();
+						else {
+							sender.sendMessage(format(p.getName(), OnDuty.getPlayerIsNotStaff()));
+							return true;
+						}
+					}	
 				}
 			
 			if (playersName == null) {

@@ -13,6 +13,7 @@ public class OnDuty extends JavaPlugin {
 	private String playersOnDutyMessage;
 	private String playersOffDutyMessage;
 	
+	private String playerIsNotStaff;
 	private String unableToFindPlayerMessage;
 	
 	@Override
@@ -26,6 +27,8 @@ public class OnDuty extends JavaPlugin {
 		this.playersOnDutyMessage =  ChatColor.translateAlternateColorCodes('&', getConfig().getString("playersOnDutyMessage"));
 		this.playersOffDutyMessage =  ChatColor.translateAlternateColorCodes('&', getConfig().getString("playersOffDutyMessage"));
 		
+		
+		this.playerIsNotStaff = ChatColor.translateAlternateColorCodes('&', getConfig().getString("playerIsNotStaff"));
 		this.unableToFindPlayerMessage = ChatColor.translateAlternateColorCodes('&', getConfig().getString("unableToFindPlayerMessage"));
 		
 		
@@ -64,6 +67,14 @@ public class OnDuty extends JavaPlugin {
 	 */
 	public static String getPlayersOffDutyMessage() {
 		return getPlugin().playersOffDutyMessage;
+	}
+	
+	/**
+	 * Gets the message sent when someone checks to see if someone is on duty and the player is does not have permission "onduty.budeti"!
+	 * @return the playerIsNotStaff
+	 */
+	public static String getPlayerIsNotStaff() {
+		return getPlugin().playerIsNotStaff;
 	}
 	
 	/**

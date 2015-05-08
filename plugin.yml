@@ -7,12 +7,13 @@ author: TheMineBench
 commands:
     Budeti:
       description: Toggles whether or not you are on duty!
-      aliases: [onDuty, duty]
+      aliases: [onduty, duty]
+      permission-message: §4You do not have permission to use this command!
       usage: /<command>
 permissions:
     onduty.budeti:
       description: Allows you to enable/disable use the command /budeti
       default: op
-    onduty.budeti.check:
+    onduty.checkBudeti:
       description: Allows you to use the command /budeti [player] to find out if a player is on duty!
-      default: op
+      default: true
