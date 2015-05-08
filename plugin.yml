@@ -8,12 +8,11 @@ commands:
     Budeti:
       description: Toggles whether or not you are on duty!
       aliases: [onDuty, duty]
-      permission: onduty.budeti
       usage: /<command>
 permissions:
     onduty.budeti:
       description: Allows you to enable/disable use the command /budeti
       default: op
-    onduty.checkBudeti:
+    onduty.budeti.check:
       description: Allows you to use the command /budeti [player] to find out if a player is on duty!
       default: op

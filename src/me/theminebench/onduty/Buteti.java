@@ -16,7 +16,7 @@ public class Buteti implements CommandExecutor {
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 		if (args.length >= 1 && sender.hasPermission("onduty.checkBudeti")) {
-
+			
 			String playersName = null;
 			if (args[0].equalsIgnoreCase("console")) {
 				playersName = "CONSOLE";
@@ -38,7 +38,12 @@ public class Buteti implements CommandExecutor {
 			}
 			return true;
 		}
-
+		
+		if (!sender.hasPermission("onduty.budeti")) {
+			sender.sendMessage(cmd.getPermissionMessage());
+			return true;
+		}
+		
 		if (players.contains(sender.getName())) {
 			players.remove(sender.getName());
 			Bukkit.broadcastMessage(format(sender.getName(), OnDuty.getDisableDutyMessage()));
